@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('user_type');
             $table->birth_date('date');
             $table->geography('location');
+            $table->smallInteger('calification');
         });
     }
 
