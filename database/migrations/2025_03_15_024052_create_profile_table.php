@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_profile', function (Blueprint $table) {
+        Schema::create('profile', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            
+            $table->text('description');
+            $table->string('photo');
+            $table->foreignId('id_users')->constrained('users');
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('table_profile');
+        Schema::dropIfExists('profile');
     }
 };
