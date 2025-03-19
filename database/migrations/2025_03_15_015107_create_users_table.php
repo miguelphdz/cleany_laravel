@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->string('user_type');
-            $table->birth_date('date');
+            $table->date('birth_date');
             $table->geography('location');
             $table->smallInteger('calification');
         });
