@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('user_type');
             $table->date('birth_date');
-            $table->geography('location');
+            $table->geography('location')->nullable();
             $table->smallInteger('calification');
         });
     }
